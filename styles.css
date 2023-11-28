@@ -1,0 +1,107 @@
+@font-face {
+	font-family: "Marhey";
+	src: url("./assets/fonts/Marhey-VariableFont_wght.ttf");
+}
+
+* {
+	--backgroundGradient: linear-gradient(to bottom, #f5ba5f, #b71b05)
+}
+
+body {
+	margin: 0;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background: var(--backgroundGradient);
+	background-attachment: fixed;
+	background-repeat: no-repeat;
+	background-size: 100vw 100vh;
+	font-family: "Marhey";
+}
+
+header {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-self: start;
+	text-align: center;
+
+	h1 {
+		font-size: 4em;
+		color: ivory;
+	}
+}
+
+main {
+	width: 80%;
+}
+
+section {
+	margin-bottom: 2em;
+	display: flex;
+	flex-direction: column;
+
+	h2 {
+		margin: 0;
+		margin-bottom: 0.5em;
+		padding-right: 1em;
+		width: 50%;
+		align-self: flex-end;
+		border-radius: 4px;
+		border-top-left-radius: 8px;
+		border-bottom-left-radius: 8px;
+		color: ivory;
+		background: royalblue;
+		font-size: 2em;
+		text-align: end;
+	}
+	h3 {
+		margin: 0;
+		margin-bottom: 0.25em;
+		padding-right: 2em;
+		right: 0px;
+		width: 30%;
+		align-self: flex-end;
+		border-top-left-radius: 8px;
+		border-bottom-left-radius: 8px;
+		color: ivory;
+		/* background: limegreen; */
+		background: #b71b05;
+		font-size: 1.5em;
+		text-align: end;
+	}
+	.collage {
+		display: grid;
+		gap: 2%;
+		grid-template-columns: repeat(5, 1fr);
+		border-top: 4px solid ivory;
+		padding-top: 1em;
+		padding-left: 2em;
+		padding-right: 2%;
+	}
+	img {
+		box-sizing: border-box;
+		width: 100%;
+		border-top: 8px solid #101111;
+		/* border-left: 4px solid #101111; */
+		/* border-right: 4px solid #101111; */
+		border-bottom: 16px solid #101111;
+		border-top-left-radius: 4px;
+		border-top-right-radius: 4px;
+		border-bottom-left-radius: 8px;
+		border-bottom-right-radius: 8px;
+		background: #fad8a6;
+		transition: transform 200ms;
+	}
+		img:hover {
+			transform: scaleX(1.05) scaleY(1.05);
+		}
+}
+
+@media (max-width: 680px) {
+	section .collage{
+		grid-template-columns: repeat(3, 1fr);
+	}
+}
