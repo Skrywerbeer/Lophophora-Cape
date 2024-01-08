@@ -4,7 +4,8 @@
 }
 
 * {
-	--backgroundGradient: linear-gradient(to bottom, #f5ba5f, #b71b05)
+	--backgroundGradient: linear-gradient(to bottom, #f5ba5f, #b71b05);
+	box-sizing: border-box;
 }
 
 body {
@@ -100,8 +101,29 @@ section {
 		}
 }
 
+footer {
+	width: 50vw;
+	align-self: center;
+	margin-bottom: 2em;
+	padding-left: 6em;
+	padding-right: 6em;
+	/* background: linear-gradient(to right, */
+	/* 							#10111144,  */
+	/* 							#101111ff 10% 90%, */
+	/* 							#10111144 ); */
+	background: #101111;
+	border-radius: 4px;
+	p {
+		color: ivory;
+	}
+}
+
 @media (max-width: 680px) {
 	section .collage{
 		grid-template-columns: repeat(3, 1fr);
 	}
+	footer {
+		width: 90vw;
+	}
+	
 }
